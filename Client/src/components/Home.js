@@ -1,0 +1,30 @@
+import React from 'react'
+import Footer from './Footer';
+import ImageSlider from './ImageSlider';
+import Recommend from './Recommend';
+import Trending from './Trending';
+// import Header from './Header'
+// import Nav from './nav/Nav'
+// import About from './about/About'
+// import Front from './front/Front'
+// // import Form from './components/login/Form'
+// import Contact from './contact/Contact'
+// import Footer from './footer/Footer'
+const Home = () => {
+  return (
+    <div>
+    <ImageSlider />
+    <Recommend />
+    <Trending />
+    <Footer />
+      {/* <Header /> */}
+      {/* <Nav />
+      <Front/>
+      <About />
+      <Contact />
+      <Footer /> */}
+    </div>
+    
+  )
+}
+export default Home;
