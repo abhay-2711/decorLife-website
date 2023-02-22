@@ -105,7 +105,7 @@ const Footer = (props) => {
               <div class="widget clearfix">
                 <h4>Contact</h4>
                 <p class="lead">
-                  795 Folsom Ave, Suite 600<br />San Francisco, CA 94107
+                  795 Folsom Ave, Suite 600<br />Mumbai, Maharashtra
                 </p>
                 <div class="center topmargin-sm">
                   <a
@@ -148,7 +148,7 @@ const Footer = (props) => {
       </div>
       <div id="copyrights">
         <div class="container center clearfix">
-          Copyrights Canvas 2020 | All Rights Reserved
+          Copyrights DecorLife 2023 | All Rights Reserved
         </div>
       </div>
     </footer>
