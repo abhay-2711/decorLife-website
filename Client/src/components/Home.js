@@ -1,4 +1,5 @@
 import React from 'react'
+import Contact from './Contact';
 import Footer from './Footer';
 import ImageSlider from './ImageSlider';
 import Recommend from './Recommend';
@@ -16,6 +17,7 @@ const Home = () => {
     <ImageSlider />
     <Recommend />
     <Trending />
+    <Contact />
     <Footer />
       {/* <Header /> */}
       {/* <Nav />

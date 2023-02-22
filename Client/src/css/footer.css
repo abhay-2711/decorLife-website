@@ -90,7 +90,7 @@ footer {
   width: 33.33333333%;}
 }
 /* 1 */
-.row>* {
+footer .row>* {
   flex-shrink: 0;
   width: 100%;
   max-width: 100%;
