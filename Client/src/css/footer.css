@@ -219,7 +219,7 @@ li {
   /* margin-bottom: 0!important; */
 }
 address, blockquote, dd, dl, fieldset, form, ol, p, pre, table, ul {
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
 }
 footer form {
   display: block;
