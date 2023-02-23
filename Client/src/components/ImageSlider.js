@@ -1,20 +1,21 @@
-import React from "react";
+import React,{useRef} from "react";
 import "../css/imageSlider.css";
 import AliceCarousel from 'react-alice-carousel';
 import "react-alice-carousel/lib/alice-carousel.css";
 import image1 from '../images/1.png'
 import image2 from '../images/2.png'
-// import image3 from '../images/3.jpg'
-// import image4 from '../images/4.jpg'
+import image3 from '../images/3.png'
+import image4 from '../images/4.png'
 
 function ImageSlider() {
+
   return (
     <div className="ImageSlider">
      <AliceCarousel autoPlay {...{infinite:"true"}} autoPlayInterval="2000">
-      <img src={image1} className="sliderimg" alt=""/>
-      <img src={image2} className="sliderimg" alt=""/>
-      <img src={image1} className="sliderimg" alt=""/>
-      <img src={image2} className="sliderimg" alt=""/>
+      <img src={image1} id="sliderImg1" className="sliderimg" style={{minHeight:"100px"}} alt=""/>
+      {/* <img src={image3} className="sliderimg" style={{minHeight:"180px"}} alt=""/> */}
+      <img src={image2} id="sliderImg2" className="sliderimg" style={{minHeight:"100px"}} alt=""/>
+      {/* <img src={image4} className="sliderimg" style={{minHeight:"180px"}} alt=""/> */}
     </AliceCarousel>
     </div>
   );
