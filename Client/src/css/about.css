@@ -13,7 +13,7 @@ main {
 }
 
 .Aboutcontainer {
-    width: 90vw;
+    width: 100%;
     margin: 7rem auto;
     max-width: var(--max-width);
     padding: 3%;
