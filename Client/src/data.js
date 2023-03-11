@@ -1,31 +1,25 @@
-import Img1 from "../src/images/AmendaLarusso.jpg";
-import Img2 from "../src/images/JohnyMcafee.jpg";
-import Img3 from "../src/images/MickelSilver.jpg";
+// import Img1 from "../src/images/AmendaLarusso.jpg";
+// import Img2 from "../src/images/JohnyMcafee.jpg";
+// import Img3 from "../src/images/MickelSilver.jpg";
+import Img1 from "../src/images/img1.jfif"
 const people = [
   {
     id: 1,
     image: Img1,
-    name: 'Amenda Larusso',
-    title: 'office manager',
+    name: 'Nico Corporation',
+    title: 'Company',
     quote:
-      'Fingerstache umami squid, kinfolk subway tile selvage tumblr man braid viral kombucha gentrify fanny pack raclette pok pok mustache.',
+      'We are here to create the perfect living aesthetic for residential as well as commercial spaces providing with you with all sorts of exclusive statues, paintings, water fountains, gifting items, etc. (indoor and outdoor). We are wholesalers, retailers and have forayed into ecommerce space too. Contact us for more details.',
   },
   {
     id: 2,
-    image:Img2,
-    name: 'Johny Mcafee',
-    title: 'Regular Guy',
+    image: Img1,
+    name: 'Nico Corporation',
+    title: 'Company',
     quote:
-      'Gastropub sustainable tousled prism occupy. Viral XOXO roof party brunch actually, chambray listicle microdosing put a bird on it paleo subway tile squid umami.',
+      'We are here to create the perfect living aesthetic for residential as well as commercial spaces providing with you with all sorts of exclusive statues, paintings, water fountains, gifting items, etc. (indoor and outdoor). We are wholesalers, retailers and have forayed into ecommerce space too. Contact us for more details.',
   },
-  {
-    id: 3,
-    image:Img3,
-    name: 'Mickel Silver',
-    title: 'product designer',
-    quote:
-      'Drinking vinegar polaroid street art echo park, actually semiotics next level butcher master cleanse hammock flexitarian ethical paleo.',
-  }
+  
 ];
 
 export default people;

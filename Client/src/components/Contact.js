@@ -1,4 +1,8 @@
-import React from "react";
+import React, { useRef } from "react";
+import emailjs from '@emailjs/browser';
+
+
+
 import "../css/contact.css";
 
 const Contact = (props) => {
@@ -14,6 +18,26 @@ const mystyle1 = {
     paddingTop: "16px",
     fontWeight: "400"
 };
+
+//reactemail.js 
+const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm(
+      "service_yr42bsg", 
+      "template_umf7bwu", 
+      form.current, 
+      "wDG8VVJ_sCoFFU19a",
+      )
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+      e.target.reset();
+  };
 
     return (
         <div id="contact">
@@ -41,17 +65,16 @@ const mystyle1 = {
               className="row mb-0"
               id="template-contactform"
               name="template-contactform"
-              action="include/form.php"
-              method="post"
               novalidate="novalidate"
+              ref={form} onSubmit={sendEmail}
               data-scrollto-settings='{"offset":140,"speed":"1250","easing":"easeInOutExpo"}'
             >
               <div className="col-md-6 mb-4">
                 <input
                   type="text"
                   id="template-contactform-name"
-                  name="template-contactform-name"
-                  value=""
+                  name="user_name"
+                  // value=""
                   className="sm-form-control border-form-control required valid"
                   placeholder="Name"
                   autocomplete="off"
@@ -61,8 +84,8 @@ const mystyle1 = {
                 <input
                   type="email"
                   id="template-contactform-email"
-                  name="template-contactform-email"
-                  value=""
+                  name="user_email"
+                  // value=""
                   className="required email sm-form-control border-form-control valid"
                   placeholder="Email Address"
                 />
@@ -72,8 +95,8 @@ const mystyle1 = {
                 <input
                   type="text"
                   id="template-contactform-phone"
-                  name="template-contactform-phone"
-                  value=""
+                  name="user_phone"
+                  // value=""
                   className="sm-form-control border-form-control valid"
                   placeholder="Phone"
                 />
@@ -83,7 +106,7 @@ const mystyle1 = {
                   type="text"
                   id="template-contactform-subject"
                   name="subject"
-                  value=""
+                  // value=""
                   className="required sm-form-control border-form-control valid"
                   placeholder="Subject"
                 />
@@ -93,7 +116,7 @@ const mystyle1 = {
                 <textarea
                   className="required sm-form-control border-form-control valid"
                   id="template-contactform-message"
-                  name="template-contactform-message"
+                  name="message"
                   rows="7"
                   cols="30"
                   placeholder="Your Message"
@@ -105,7 +128,7 @@ const mystyle1 = {
                   type="submit"
                   id="template-contactform-submit"
                   name="template-contactform-submit"
-                  value="submit"
+                  value="Send"
                 >
                   Send Message
                 </button>

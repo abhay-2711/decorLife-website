@@ -19,6 +19,7 @@ const mystyle1 = {
             <h3
               className="box-title"
               style={mystyle1}
+              
             >
               Recommended For You
             </h3>
