@@ -81,7 +81,7 @@ const role = user?.role;
         icon={
           <img
             className="speedDialIcon"
-            src={avatar.url ? avatar.url : "/Profile.png"}
+            src={avatar?.url ? avatar?.url : "/Profile.png"}
             alt="Profile"
           />
         }
