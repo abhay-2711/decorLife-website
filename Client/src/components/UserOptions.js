@@ -37,17 +37,14 @@ const navigate = useNavigate();
     { icon: <ExitToAppIcon />, name: "Logout", func: logoutUser },
   ];
 
-const role = user?.role;
 
-  if (role === "admin") {
+  if (user?.role === "admin") {
     options.unshift({
       icon: <DashboardIcon />,
       name: "Dashboard",
       func: dashboard,
     });
   }
-
-  const avatar = user?.avatar;
 
   function dashboard() {
     navigate("/admin/dashboard");
@@ -81,7 +78,7 @@ const role = user?.role;
         icon={
           <img
             className="speedDialIcon"
-            src={avatar?.url ? avatar?.url : "/Profile.png"}
+            src={user?.avatar?.url ? user?.avatar?.url : "/Profile.png"}
             alt="Profile"
           />
         }
