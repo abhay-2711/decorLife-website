@@ -40,12 +40,12 @@ const Header = () => {
               <a href="/" className="navbar-brand">
                 DecorLife
               </a>
-              <img
+              {/* <img
                 src="https://media.geeksforgeeks.org/wp-content/uploads/20221210182541/Untitled-design-(30).png"
                 class="icn menuicn"
                 id="menuicn"
                 alt="menu-icon"
-              ></img>
+              ></img> */}
               <button
                 type="button"
                 className="navbar-toggler"
