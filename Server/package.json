@@ -1,5 +1,5 @@
 {
-  "name": "decor-life-website",
+  "name": "server",
   "version": "1.0.0",
   "description": "project for internship",
   "main": "server.js",
