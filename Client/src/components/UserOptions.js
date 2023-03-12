@@ -37,7 +37,9 @@ const navigate = useNavigate();
     { icon: <ExitToAppIcon />, name: "Logout", func: logoutUser },
   ];
 
-  if (user.role === "admin") {
+const role = user?.role;
+
+  if (role === "admin") {
     options.unshift({
       icon: <DashboardIcon />,
       name: "Dashboard",
