@@ -47,6 +47,8 @@ const role = user?.role;
     });
   }
 
+  const avatar = user?.avatar;
+
   function dashboard() {
     navigate("/admin/dashboard");
   }
@@ -79,7 +81,7 @@ const role = user?.role;
         icon={
           <img
             className="speedDialIcon"
-            src={user.avatar.url ? user.avatar.url : "/Profile.png"}
+            src={avatar.url ? avatar.url : "/Profile.png"}
             alt="Profile"
           />
         }
