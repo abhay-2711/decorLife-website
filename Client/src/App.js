@@ -47,7 +47,7 @@ function App(){
   const [stripeApiKey,setStripeApiKey] = useState("");
 
   async function getStripeApiKey(){
-    const {data} = await axios.get("/api/v1/stripeapikey");
+    const {data} = await axios.get("https://decor-life.onrender.com/api/v1/stripeapikey", { withCredentials: true });
     setStripeApiKey(data.stripeApiKey);
   }
 
