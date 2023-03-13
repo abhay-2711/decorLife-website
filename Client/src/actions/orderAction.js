@@ -48,7 +48,7 @@ import {
     try {
       dispatch({ type: MY_ORDERS_REQUEST });
   
-      const { data } = await axios.get("http://localhost:4000/api/v1/orders/me", { withCredentials: true });
+      const { data } = await axios.get("https://decor-life.onrender.com/api/v1/orders/me", { withCredentials: true });
   
       dispatch({ type: MY_ORDERS_SUCCESS, payload: data.orders });
     } catch (error) {
@@ -64,7 +64,7 @@ import {
     try {
       dispatch({ type: ALL_ORDERS_REQUEST });
   
-      const { data } = await axios.get("http://localhost:4000/api/v1/admin/orders", { withCredentials: true });
+      const { data } = await axios.get("https://decor-life.onrender.com/api/v1/admin/orders", { withCredentials: true });
   
       dispatch({ type: ALL_ORDERS_SUCCESS, payload: data.orders });
     } catch (error) {
@@ -86,7 +86,7 @@ import {
         },
       };
       const { data } = await axios.put(
-        `http://localhost:4000/api/v1/admin/order/${id}`, { withCredentials: true },
+        `https://decor-life.onrender.com/api/v1/admin/order/${id}`, { withCredentials: true },
         order,
         config
       );
@@ -105,7 +105,7 @@ import {
     try {
       dispatch({ type: DELETE_ORDER_REQUEST });
   
-      const { data } = await axios.delete(`http://localhost:4000/api/v1/admin/order/${id}`, { withCredentials: true });
+      const { data } = await axios.delete(`https://decor-life.onrender.com/api/v1/admin/order/${id}`, { withCredentials: true });
   
       dispatch({ type: DELETE_ORDER_SUCCESS, payload: data.success });
     } catch (error) {
@@ -121,7 +121,7 @@ import {
     try {
       dispatch({ type: ORDER_DETAILS_REQUEST });
   
-      const { data } = await axios.get(`http://localhost:4000/api/v1/order/${id}`, { withCredentials: true });
+      const { data } = await axios.get(`https://decor-life.onrender.com/api/v1/order/${id}`, { withCredentials: true });
   
       dispatch({ type: ORDER_DETAILS_SUCCESS, payload: data.order });
     } catch (error) {
