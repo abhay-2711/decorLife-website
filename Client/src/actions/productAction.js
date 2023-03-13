@@ -38,10 +38,10 @@ export const getProduct =
     try {
       dispatch({ type: ALL_PRODUCT_REQUEST });
 
-      let link = `https://decor-life.onrender.com/api/v1/products?keyword=${keyword}&page=${currentPage}&price[gte]=${price[0]}&price[lte]=${price[1]}&ratings[gte]=${ratings}`;
+      let link = `http://localhost:4000/api/v1/products?keyword=${keyword}&page=${currentPage}&price[gte]=${price[0]}&price[lte]=${price[1]}&ratings[gte]=${ratings}`;
 
       if (category) {
-        link = `https://decor-life.onrender.com/api/v1/products?keyword=${keyword}&page=${currentPage}&price[gte]=${price[0]}&price[lte]=${price[1]}&category=${category}&ratings[gte]=${ratings}`;
+        link = `http://localhost:4000/api/v1/products?keyword=${keyword}&page=${currentPage}&price[gte]=${price[0]}&price[lte]=${price[1]}&category=${category}&ratings[gte]=${ratings}`;
       }
       const { data } = await axios.get(link);
 
@@ -63,7 +63,7 @@ export const getAdminProduct = () => async (dispatch) => {
     dispatch({ type: ADMIN_PRODUCT_REQUEST });
 
     const { data } = await axios.get(
-      "https://decor-life.onrender.com/api/v1/admin/products",
+      "http://localhost:4000/api/v1/admin/products",
       { withCredentials: true }
     );
 
@@ -89,7 +89,7 @@ export const createProduct = (productData) => async (dispatch) => {
     };
 
     const { data } = await axios.post(
-      `https://decor-life.onrender.com/api/v1/admin/product/new`,
+      `http://localhost:4000/api/v1/admin/product/new`,
       { withCredentials: true },
       productData,
       config
@@ -117,7 +117,7 @@ export const updateProduct = (id, productData) => async (dispatch) => {
     };
 
     const { data } = await axios.put(
-      `https://decor-life.onrender.com/api/v1/admin/product/${id}`, { withCredentials: true },
+      `http://localhost:4000/api/v1/admin/product/${id}`, { withCredentials: true },
       productData,
       config
     );
@@ -140,7 +140,7 @@ export const deleteProduct = (id) => async (dispatch) => {
     dispatch({ type: DELETE_PRODUCT_REQUEST });
 
     const { data } = await axios.delete(
-      `https://decor-life.onrender.com/api/v1/admin/product/${id}`, { withCredentials: true }
+      `http://localhost:4000/api/v1/admin/product/${id}`, { withCredentials: true }
     );
 
     dispatch({
@@ -161,7 +161,7 @@ export const getProductDetails = (id) => async (dispatch) => {
     dispatch({ type: PRODUCT_DETAILS_REQUEST });
 
     const { data } = await axios.get(
-      `https://decor-life.onrender.com/api/v1/product/${id}`, { withCredentials: true }
+      `http://localhost:4000/api/v1/product/${id}`, { withCredentials: true }
     );
 
     dispatch({
@@ -186,7 +186,7 @@ export const newReview = (reviewData) => async (dispatch) => {
     };
 
     const { data } = await axios.put(
-      `https://decor-life.onrender.com/api/v1/review`, { withCredentials: true },
+      `http://localhost:4000/api/v1/review`, { withCredentials: true },
       reviewData,
       config
     );
@@ -209,7 +209,7 @@ export const getAllReviews = (id) => async (dispatch) => {
     dispatch({ type: ALL_REVIEW_REQUEST });
 
     const { data } = await axios.get(
-      `https://decor-life.onrender.com/api/v1/reviews?id=${id}`, { withCredentials: true }
+      `http://localhost:4000/api/v1/reviews?id=${id}`, { withCredentials: true }
     );
 
     dispatch({
@@ -230,7 +230,7 @@ export const deleteReviews = (reviewId, productId) => async (dispatch) => {
     dispatch({ type: DELETE_REVIEW_REQUEST });
 
     const { data } = await axios.delete(
-      `https://decor-life.onrender.com/api/v1/reviews?id=${reviewId}&productId=${productId}`, { withCredentials: true }
+      `http://localhost:4000/api/v1/reviews?id=${reviewId}&productId=${productId}`, { withCredentials: true }
     );
 
     dispatch({
