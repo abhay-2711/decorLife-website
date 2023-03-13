@@ -19,6 +19,16 @@ app.use(cookieParser());
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(fileUpload());
 
+// CORS middleware
+const allowCrossDomain = (req, res, next) => {
+    res.header(`Access-Control-Allow-Origin`, `*`);
+    res.header(`Access-Control-Allow-Methods`, `GET,PUT,POST,DELETE`);
+    res.header(`Access-Control-Allow-Headers`, `Content-Type`);
+    next();
+  };
+app.use(allowCrossDomain);
+  
+
 //Route Imports
 const product = require("./routes/productRoute");
 const user = require("./routes/userRoute");

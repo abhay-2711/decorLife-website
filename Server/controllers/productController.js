@@ -50,7 +50,7 @@ exports.getAllProducts = catchAsyncErrors(async (req, res) => {
     .filter()
     .pagination(resultPerPage);
   const products = await apiFeature.query;
-  res.setHeader("Access-Control-Allow-Origin", "*")
+  // res.setHeader("Access-Control-Allow-Origin", "*")
   // let filteredProductsCount = products.length;
 
   // apiFeature.pagination(resultPerPage);
