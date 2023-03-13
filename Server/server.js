@@ -5,18 +5,10 @@ const dotenv = require("dotenv");
 const cloudinary = require("cloudinary");
 const connectDatabase = require("./config/database");
 const cors = require('cors');
-
+ 
 const corsOpts = {
     origin: '*',
-  
-    methods: [
-      'GET',
-      'POST',
-    ],
-  
-    allowedHeaders: [
-      'Content-Type',
-    ],
+    credentials: true
   };
   
   app.use(cors(corsOpts));
