@@ -1,18 +1,9 @@
 const app = require("./app");
-var http = require('http');
 
 const dotenv = require("dotenv");
 const cloudinary = require("cloudinary");
 const connectDatabase = require("./config/database");
-const cors = require('cors');
- 
-const corsOpts = {
-    origin: '*',
-    credentials: true
-  };
-  
-  app.use(cors(corsOpts));
-  
+
 
 
 //Handling Uncaught Exception
@@ -23,10 +14,8 @@ process.on("uncaughtException",(err)=>{
     process.exit(1);
 })
 
-// console.log(youtube);
 
 //config 
-
 dotenv.config({path:"config/config.env"});
 
 //connecting to database
@@ -38,15 +27,13 @@ cloudinary.config({
     api_secret:process.env.CLOUDINARY_API_SECRET
 })
 
-var httpServer = http.createServer(app);
-
-const server = httpServer.listen(process.env.PORT,()=>{
-    console.log("Server is working on : ", process.env.PORT);
-})
-
-// const server = app.listen(process.env.PORT,()=>{
-//     console.log(`Server is working on http://localhost:${process.env.PORT}`)
+// const server = httpServer.listen(process.env.PORT,()=>{
+//     console.log("Server is working on : ", process.env.PORT);
 // })
+
+const server = app.listen(process.env.PORT,()=>{
+    console.log(`Server is working on http://localhost:${process.env.PORT}`)
+})
 
 //Unhandled Promise Rejection
 process.on("unhandledRejection",(err)=>{
