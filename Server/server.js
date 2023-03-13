@@ -8,7 +8,7 @@ const cors = require("cors");
 
 app.use(
   cors({
-    origin: ["https://decor-life.netlify.app","http://localhost:3000"],
+    origin: "*"
   })
 );
 
