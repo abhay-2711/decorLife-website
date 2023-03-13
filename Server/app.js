@@ -32,7 +32,7 @@ const cors = require("cors");
 
 app.use(
   cors({
-    origin: "https://decor-life.netlify.app/",
+    origin: "*",
     credentials: true,
     // methods: ["GET", "POST", "PUT", "DELETE"],
     // allowedHeaders: ["Content-Type", "Authorization"],
